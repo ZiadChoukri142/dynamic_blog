@@ -35,6 +35,27 @@ if (isset($_GET['delete-admin'])) {
 	deleteAdmin($admin_id);
 }
 
+/* - - - - - - - - - - 
+-  Topic actions
+- - - - - - - - - - -*/
+// if user clicks the create topic button
+if (isset($_POST['create_topic'])) { createTopic($_POST); }
+// if user clicks the Edit topic button
+if (isset($_GET['edit-topic'])) {
+	$isEditingTopic = true;
+	$topic_id = $_GET['edit-topic'];
+	editTopic($topic_id);
+}
+// if user clicks the update topic button
+if (isset($_POST['update_topic'])) {
+	updateTopic($_POST);
+}
+// if user clicks the Delete topic button
+if (isset($_GET['delete-topic'])) {
+	$topic_id = $_GET['delete-topic'];
+	deleteTopic($topic_id);
+}
+
 /* - - - - - - - - - - - -
 -  Admin users functions
 - - - - - - - - - - - - -*/
