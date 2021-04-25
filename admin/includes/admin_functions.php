@@ -7,6 +7,10 @@ $role = "";
 $email = "";
 // general variables
 $errors = [];
+// Topics variables
+$topic_id = 0;
+$isEditingTopic = false;
+$topic_name = "";
 
 /* - - - - - - - - - - 
 -  Admin users actions
